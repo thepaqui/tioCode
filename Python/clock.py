@@ -4,7 +4,7 @@ from datetime import datetime
 def update_clock():
     now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     label.config(text=now)
-    label.after(1000, update_clock)  # update every second
+    label.after(1000, update_clock)
 
 root = tk.Tk()
 root.title("Live Clock")
@@ -14,3 +14,4 @@ label.pack(fill="both", expand=True)
 
 update_clock()
 root.mainloop()
+
